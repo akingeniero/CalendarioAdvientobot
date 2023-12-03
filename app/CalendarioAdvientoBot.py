@@ -1,9 +1,13 @@
 import telebot
 import datetime
+from flask import Flask
 
 
 TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
 
+@app.route('/')
+def health_check():
+    return 'OK'
 
 bot = telebot.TeleBot(TOKEN)
 app.debug = True
@@ -64,3 +68,4 @@ def regalo(message):
 
 if __name__ == "__main__":
     bot.polling(none_stop=True)
+    app.run(host='0.0.0.0', port=8080)
