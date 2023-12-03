@@ -6,4 +6,6 @@ RUN pip install pyTelegramBotAPI
 
 COPY app/ .
 
-CMD ["python", "bot_telegram.py"]
+EXPOSE 8080
+
+CMD ["python", "CalendarioAdvientoBot.py"]

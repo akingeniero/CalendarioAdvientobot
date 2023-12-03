@@ -1,13 +1,11 @@
 import telebot
 import datetime
-from flask import Flask, request
 
 
 TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
 
 
 bot = telebot.TeleBot(TOKEN)
-app = Flask(__name__)
 app.debug = True
 
 opened_gifts = {}
