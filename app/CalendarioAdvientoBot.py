@@ -2,7 +2,11 @@ import telebot
 import datetime
 from flask import Flask
 import threading
+import pytz
 
+utc_now = datetime.datetime.utcnow()
+spain_timezone = pytz.timezone('Europe/Madrid')
+spain_now = utc_now.replace(tzinfo=pytz.utc).astimezone(spain_timezone)
 
 TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
 app = Flask(__name__)
@@ -33,7 +37,7 @@ def hola(message):
 
 @bot.message_handler(commands=['regalo'])
 def regalo(message):
-    today = datetime.date.today()
+    today = spain_now.date()
     user = message.from_user.id
     key = f"{user}_{today}"
     if key in opened_gifts:
