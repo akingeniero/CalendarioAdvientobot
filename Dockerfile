@@ -1,17 +1,11 @@
-# Use the official Python image as the base image
 FROM python:3.9
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy the application files into the working directory
-COPY . /app
+COPY requirements.txt .
 
-# Install the application dependencies
 RUN pip install pyTelegramBotAPI
-RUN pip install Flask
 
-EXPOSE 8000
+COPY app/ .
 
-# Define the entry point for the container
-CMD ["python", "CalendarioAdvientoBot.py"]
+CMD ["python", "bot_telegram.py"]
