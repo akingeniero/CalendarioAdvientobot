@@ -10,20 +10,7 @@ bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
 app.debug = True
 
-
-
 opened_gifts = {}
-
-@app.route('/' + TOKEN, methods=['POST'])
-def getMessage():
-    bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
-    return "!", 200
-
-@app.route("/")
-def webhook():
-    bot.remove_webhook()
-    bot.set_webhook(url='https://caledariadviento-wb7lquev.b4a.run/')
-    return "!", 200
 
 @bot.message_handler(commands=['start'])
 def hola(message):
