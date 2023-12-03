@@ -9,3 +9,9 @@ COPY . /app
 
 # Install the application dependencies
 RUN pip install pyTelegramBotAPI
+RUN pip install Flask
+
+EXPOSE 8000
+
+# Define the entry point for the container
+CMD ["python", "CalendarioAdvientoBot.py"]
