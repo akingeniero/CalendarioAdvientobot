@@ -1,6 +1,5 @@
 import telebot
 import datetime
-from flask import Flask
 
 
 TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
@@ -8,22 +7,11 @@ TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
 
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
-app.debug = True
 
 
 
 opened_gifts = {}
 
-@app.route('/' + TOKEN, methods=['POST'])
-def getMessage():
-    bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
-    return "!", 200
-
-@app.route("/")
-def webhook():
-    bot.remove_webhook()
-    bot.set_webhook(url='https://caledariadviento-wb7lquev.b4a.run/')
-    return "!", 200
 
 @bot.message_handler(commands=['start'])
 def hola(message):
@@ -77,6 +65,4 @@ def regalo(message):
         bot.send_message(message.chat.id, regalo_dia)
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000)
-    bot.polling(none_stop=True)
+bot.polling()
