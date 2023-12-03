@@ -8,6 +8,7 @@ TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
 
 bot = telebot.TeleBot(TOKEN)
 app = Flask(__name__)
+app.debug = True
 
 
 
@@ -25,7 +26,6 @@ def webhook():
     return "!", 200
 
 @bot.message_handler(commands=['start'])
-@app.route('/start', methods=['GET', 'POST'])
 def hola(message):
     mensaje_bienvenida = (
         "¡Hola! jeje"
@@ -37,7 +37,6 @@ def hola(message):
 
 
 @bot.message_handler(commands=['regalo'])
-@app.route('/regalo', methods=['GET', 'POST'])
 def regalo(message):
     today = datetime.date.today()
     user = message.from_user.id
