@@ -10,7 +10,5 @@ COPY . /app
 # Install the application dependencies
 RUN pip install pyTelegramBotAPI
 
-EXPOSE 8000
-
 # Define the entry point for the container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "CalendarioAdvientoBot.py"]
