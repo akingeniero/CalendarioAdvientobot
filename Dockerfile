@@ -9,6 +9,7 @@ COPY . /app
 
 # Install the application dependencies
 RUN pip install pyTelegramBotAPI
+RUN pip install flask
 
 EXPOSE 8000
 
