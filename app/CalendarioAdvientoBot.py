@@ -1,9 +1,15 @@
 import telebot
 import datetime
 from flask import Flask
+import threading
 
 
 TOKEN = '6976560783:AAFFdWfbYsegezOqNKmt0rXzCvSaEvfS-Aw'
+app = Flask(__name__)
+
+def telegram_polling():
+    bot.remove_webhook()  # Asegúrate de que no haya webhook configurado
+    bot.infinity_polling()
 
 @app.route('/')
 def health_check():
@@ -67,5 +73,9 @@ def regalo(message):
 
 
 if __name__ == "__main__":
-    bot.polling(none_stop=True)
+    telegram_thread = threading.Thread(target=telegram_polling)
+    telegram_thread.daemon = True
+    telegram_thread.start()
+
+    # Ejecutar Flask en el puerto 8080 (o el puerto que necesites)
     app.run(host='0.0.0.0', port=8080)
