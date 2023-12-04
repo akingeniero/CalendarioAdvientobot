@@ -49,7 +49,7 @@ def regalo(message):
             "2.Cada día me enseñas algo nuevo, algo valioso, algo que no cambiaría",
             "3.No demos todo por perdido, mientras quede vida en un latido",
             "4.La magia de la Navidad está en el aire",
-            "5.Si supieras que, aun con tus miedos e inseguridades, aun con tu caos y tus defectos, aun con tu locura y tus manias, aun así, siempre tendré gnas de elegirte y deseos de quererte, porque siendo así, tan autentica, te veo mas especial y mas bonita",
+            "5.Si supieras que, aun con tus miedos e inseguridades, aun con tu caos y tus vicios, aun con tu locura y tus manías, aun así, siempre tendré ganas de elegirte y deseos de quererte, porque siendo así, tan autentica, te veo más especial y más bonita",
             "6.El calendario de adviento nos recuerda la importancia de la paciencia y la ilusión",
             "7.Porque soy el fan número uno De esa música que hacen tus tacones Cuando camino a tu lado",
             "8.Hoy es un día especial, vamos a disfrutarlo y que sea inolvidable",
