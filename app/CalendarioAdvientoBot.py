@@ -34,6 +34,10 @@ def hola(message):
     )
     bot.send_message(message.chat.id, mensaje_bienvenida)
 
+@bot.message_handler(commands=['regalo9tardejeje'])
+def hola(message):
+    bot.send_message(message.chat.id, "9.Se la persona que de alas para volar y raíces para mantenerme fuerte")
+
 
 @bot.message_handler(commands=['regalo'])
 def regalo(message):
