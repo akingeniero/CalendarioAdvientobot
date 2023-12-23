@@ -70,8 +70,8 @@ def regalo(message):
             "19.Yo te eché mi brazo al hombro y un brillo de luz de luna iluminaba tus ojos.",
             "20.Cuando las palabras fallan, la música habla.",
             "21.La Navidad es bonita si es contigo",
-            "22.Felicita a tu padre jeje ademas es la loteria a ver si me toca y vamos a celebrarlo"
-            "23.Ya queda poquitooo jeje es casi tu ultimo mensaje espero que hayas disfutado del camino",
+            "22.Felicita a tu padre jeje ademas es la loteria a ver si me toca y vamos a celebrarlo",
+            "23.Aunque la distancia nos separe, nuestros deseos de vernos se entrelazan como la magia de la Navidad",
             "24.Feliz noche buena, te amooo. Estamos lejos pero te siento cerca , además feliz 3 mesesss"
         ]
 
